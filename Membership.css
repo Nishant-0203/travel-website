@@ -1,0 +1,49 @@
+#money{
+    font-size: 30px;
+   
+}
+body{
+  background-image:linear-gradient(to left,pink ,rgb(225, 86, 128));
+}
+
+.col-lg-4 {
+  text-align: center;
+
+}
+.membership-section {
+    padding: 100px 0;
+    backdrop-filter: blur(10px);
+  }
+  
+  .membership-plan {
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    animation: transitionIn 0.75s;
+  }
+  
+  .membership-plan h3 {
+    color: #333;
+  }
+  .container{
+    animation: transitionIn 0.75s;
+  }
+  
+  .membership-plan p {
+    color: #666;
+    font-size: large;
+  }
+  @keyframes transitionIn{
+    from{
+      opacity: 0;
+      transform: rotateY(-10deg);
+    }
+    to{
+      opacity: 1;
+      transform: rotateY(0);
+    }
+  }
+  .membership-plan:hover{
+    scale:1.1
+  }
