@@ -1,0 +1,85 @@
+body{
+    background: linear-gradient(90deg, 
+    #283048,
+    #859398);
+  }.card{
+      margin:auto;
+      border:solid 1px #dbdad7; 
+      width:40%;
+      padding-left:10px ;
+      padding-bottom:10px ;
+      padding-right:10px ;
+      margin-top: 100px;
+      }
+    
+    .card-title{
+      margin:auto;
+      padding:15px;
+      width:80%;
+    }
+    
+    div.card-body{
+      padding:0px;
+    }
+    .custom-select{
+      width:100%;
+    }
+    
+    .btn2{
+      margin-left:10%;
+    }
+    input {
+      outline: 0 ;
+      border-width: 0 0 2px ;
+      border-color: #d1d1cf ;
+    }
+    input:focus {
+      border-color: #d1d1cf ;
+     -webkit-box-shadow: none ;
+      box-shadow: none ;
+    }
+    
+    select{
+     outline: 0 ;
+      border-width: 0 0 2px ;
+      border-color: #d1d1cf ;
+    }
+    
+    select:focus{
+        border-color: #d1d1cf ;
+     -webkit-box-shadow: none ;
+      box-shadow: none ;
+    }
+    
+    .radiobtn{
+      margin-left: 3.5%;
+    }
+    
+    .icons{
+      margin:auto ;
+    
+    }
+    .col-sm-6{
+      font-family:Arial;
+    }
+    @media only screen and (max-width: 600px) {
+      .card{
+        margin:auto;
+        border:solid 1px #dbdad7;
+        width:90%;
+        padding-left:10px ;
+        padding-bottom:10px ;
+        padding-right:10px ;
+        padding-top: 0px ;
+      
+      }
+    
+      .fa{
+        border-radius: 25px;
+        width: 15%;
+        margin-left: 5%;
+        border:solid 2px #dbdad7;
+        margin-top:5%;
+        text-align: center;
+      }
+    }
