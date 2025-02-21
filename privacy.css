@@ -1,0 +1,26 @@
+body {
+    padding-top: 20px;
+    background-color: #f8f9fa;
+}
+
+.card {
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 0.25rem;
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+h1, h2 {
+    color: #007bff;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
