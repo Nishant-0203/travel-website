@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hotel Booking</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f8f9fa;
+    }
+
+    header {
+      background-color: #e2a52a;
+      color: #fff;
+      padding: 1.5rem;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 550px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    label {
+      margin-bottom: 8px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    input {
+      padding: 10px;
+      margin-bottom: 16px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    button {
+      background-color: #343a40;
+      color: #fff;
+      padding: 12px;
+      cursor: pointer;
+      border: none;
+      border-radius: 4px;
+      font-size: 16px;
+    }
+
+    button:hover {
+      background-color: #e0ba21;
+    }
+
+    #bookingResult {
+      margin-top: 20px;
+    }
+
+    #bookingResult p {
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Hotel Booking</h1>
+  </header>
+
+  <div class="container">
+    <form id="bookingForm">
+      <label for="name">Name:</label>
+      <input type="text" id="name" required>
+
+      <label for="checkin">Check-in Date:</label>
+      <input type="date" id="checkin" required>
+
+      <label for="checkout">Check-out Date:</label>
+      <input type="date" id="checkout" required>
+
+      <label for="rooms">Number of Rooms:</label>
+      <input type="number" id="rooms" min="1" max="5" required>
+
+      <button type="button" onclick="submitBooking()">Book Now</button>
+    </form>
+
+    <div id="bookingResult"></div>
+  </div>
+
+  <script>
+    function submitBooking() {
+      const name = document.getElementById('name').value;
+      const checkin = document.getElementById('checkin').value;
+      const checkout = document.getElementById('checkout').value;
+      const rooms = document.getElementById('rooms').value;
+      const nameRegex = /^[A-Za-z]+$/;
+      const currentDate = new Date().toISOString().split('T')[0];
+
+if (!checkin || !checkout) {
+  alert('Please select both check-in and check-out dates');
+  return;
+}
+
+if (checkin < currentDate || checkout < currentDate) {
+  alert('Check-in and check-out dates must be present or future dates');
+  return;
+}
+   
+      if (!nameRegex.test(name)) {
+      alert('Please enter a valid name with only characters');
+      return;
+    }
+      if (!name || !checkin || !checkout || !rooms) {
+        alert('Please fill in all fields');
+        return;
+      }
+    
+
+      const bookingSummary = `
+        <p><strong>Name:</strong> ${name}</p>
+        <p><strong>Check-in Date:</strong> ${checkin}</p>
+        <p><strong>Check-out Date:</strong> ${checkout}</p>
+        <p><strong>Number of Rooms:</strong> ${rooms}</p>
+      `;
+
+    
+      document.getElementById('bookingResult').innerHTML = bookingSummary;
+    }
+  </script>
+
+</body>
+</html>
