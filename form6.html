@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>makemytrip</title>
+  <link rel="icon" type="image/x-icon" href="make.png">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+    <style>
+        body {
+            background-size: cover;
+            background-position: center;
+            background-image: url(images/goa-b.jpg);
+        }
+
+        .container {
+            max-width: 400px;
+            border: 2px solid grey;
+            backdrop-filter: blur(20px);
+            background-size: cover;
+            background-repeat: no-repeat;
+            margin-top: 40px;
+        }
+
+        .button {
+            margin: 0 20px;
+        }
+
+        .button.btn {
+            margin: 20px 10px 20px 0;
+            box-shadow: none;
+        }
+
+        .button span {
+            color: #fff;
+            margin-right: 5px;
+            font-size: 15px;
+        }
+
+
+        .book label {
+            margin-bottom: 5px;
+            margin-top: 10px;
+            font-size: 20px;
+            color: #fff;
+        }
+
+        .in::placeholder {
+            color: #fff  ;
+        }
+
+        .in {
+            width: 151px;
+            display: inline  ;
+            padding: 10px;
+        }
+
+        .form-control {
+            font-size: 13px  ;
+            border-radius: 0  ;
+            color: #fff  ;
+            background: transparent  ;
+            box-shadow: none  ;
+        }
+
+        .select-date::-webkit-calender-picker-indicator {
+            background: transparent;
+        }
+
+        .custom-select {
+            color: #fff ;
+            font-size: 12px ;
+            border: 1px solid #ced4da ;
+            box-shadow: none ;
+            border-radius: 0 ;
+            background: transparent;
+        }
+
+        .custom-select option {
+            color: #333;
+        }
+
+        .flight {
+            width: 80%;
+            padding: 9px 0;
+            margin-left: 30px;
+            background:rgb(7, 22, 157);
+            color:#fff;
+            border: 2px solid grey;
+        }
+
+        .in input {
+            padding: 6px;
+        }
+
+        .in label {
+            font-size: 20px;
+            color: #fff;
+        }
+
+        .book input {
+            padding: 6px;
+            max-width: 100%;
+        }
+
+        .in a{color:#fff;
+        text-decoration: none;}
+
+   @media (min-width: 640px) and (width: 1024px) {
+  body {
+    background-image: url(goa-b.jpg);
+    background-repeat: no-repeat;
+  }
+}
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="button">
+            <input type="radio" class="btn" name="check" checked="checked">
+            <span>roundtrip</span>
+
+            <input type="radio" class="btn" name="check"><span>one way</span>
+            <input type="radio" class="btn" name="check"><span>multy-city</span> <br>
+        </div>
+
+        <div class="book">
+            <label>Flying from</label><br>
+            <input type="text" class="form-control" placeholder="city or airport" required><br>
+            <label>Flying to</label><br>
+            <input type="text" class="form-control" placeholder="city or airport" required><br>
+
+            <div class="in">
+                <label>Departing</label><br>
+                <input type="date" class="form-control select-date" placeholder="city or airport" required>
+            </div>
+
+            <div class="in">
+                <label>Returning</label><br>
+                <input type="date" class="form-control select-date" placeholder="city or airport" required>
+            </div>
+        </div>
+        <div class="in">
+            <label>Adults</label><br>
+            <input type="number" class="form-control" value="1">
+        </div>
+        <div class="in">
+            <label>Children</label><br>
+            <input type="number" class="form-control" value="1">
+        </div><br>
+        <div class="in">
+            <button type="sumbit" value="submit" class="flight"> <a href="resume.html">Book</a> </button>
+        </div>
+    </div>
+</body>
+
+</html>
